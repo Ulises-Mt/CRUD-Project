@@ -5,6 +5,7 @@
 package crudproject;
 
 import java.util.Set;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -245,6 +246,7 @@ public class frmArticulo extends javax.swing.JFrame {
         lblprecio.setText("Codigo");
 
         btneliminar.setText("Eliminar");
+        btneliminar.addActionListener(this::btneliminarActionPerformed);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -373,6 +375,18 @@ public class frmArticulo extends javax.swing.JFrame {
             
         }
     }//GEN-LAST:event_lstArticuloValueChanged
+
+    private void btneliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneliminarActionPerformed
+        //Muestra un cuadro preguntado si queremos eliminar
+        int respuesta = JOptionPane.showConfirmDialog(this, "Deseas eliminar este articulo "
+                    + updateArticulo.getDescripcion()+"? ", 
+                "Eliminacion de articulos ",
+        JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        //Si la respuesta es si elimina
+       if(respuesta == JOptionPane.YES_OPTION){
+           updateArticulo.eliminar();   
+       }
+    }//GEN-LAST:event_btneliminarActionPerformed
 
     private void txtCodigoActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_txtCodigoActionPerformed
         // TODO add your handling code here:

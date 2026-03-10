@@ -34,6 +34,9 @@ public class clsArticulo {
         // Solo retornamos la cadena, no imprimimos aquí
         return this.codigo + "|" + this.descripcion + "|" + this.precio;
     }
+    public String getDescripcion(){
+        return this.descripcion; 
+    }
 
     // guardar informacion
     public void guardar() {
@@ -70,8 +73,19 @@ public class clsArticulo {
         System.out.println("Valores Originales:" + lineaOriginal);
         
         //Solicita la actualizacion del registro
-        mArticulo mArticle = new mArticulo();
-        
+        mArticulo mArticle = new mArticulo();         
         mArticle.update(lineaOriginal, nuevaLinea, "listado_articulos.txt");
+    }
+    
+    public void eliminar(){
+        //registro a eliminar
+        String lineaOriginal = this.codigo + "|" + this.descripcion + "|" + this.precio;
+        
+        //Imprimir los valores
+        System.out.println("Valores Originales:" + lineaOriginal);
+        
+        //Solicita la eliminacion
+        mArticulo mArticle = new mArticulo();  
+        mArticle.delete(lineaOriginal, "listado_articulos.txt");
     }
 }
