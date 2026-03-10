@@ -1,2 +1,8 @@
+<<<<<<< HEAD
 3|  Nada| 3
 2|  Ruflless| 2
+=======
+ 3|  Nada| 3
+ 2|  Ruflless| 2
+3|Juan|1500.0
+>>>>>>> 696f1116325fbf4c836b0738ba4d4bb526f1bf1f

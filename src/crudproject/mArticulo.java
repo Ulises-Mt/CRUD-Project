@@ -95,6 +95,7 @@ public class mArticulo {
             System.out.println("No se encuentro el registro");
         }   
     }
+<<<<<<< HEAD
     
     public void delete(String lineActual, String archivoOriginal){
         java.io.File fileOriginal = new java.io.File(archivoOriginal);
@@ -132,4 +133,6 @@ public class mArticulo {
             System.out.println("No se encontro el registro");
         }   
     }
+=======
+>>>>>>> 696f1116325fbf4c836b0738ba4d4bb526f1bf1f
 }

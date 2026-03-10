@@ -34,9 +34,12 @@ public class clsArticulo {
         // Solo retornamos la cadena, no imprimimos aquí
         return this.codigo + "|" + this.descripcion + "|" + this.precio;
     }
+<<<<<<< HEAD
     public String getDescripcion(){
         return this.descripcion; 
     }
+=======
+>>>>>>> 696f1116325fbf4c836b0738ba4d4bb526f1bf1f
 
     // guardar informacion
     public void guardar() {
@@ -73,6 +76,7 @@ public class clsArticulo {
         System.out.println("Valores Originales:" + lineaOriginal);
         
         //Solicita la actualizacion del registro
+<<<<<<< HEAD
         mArticulo mArticle = new mArticulo();         
         mArticle.update(lineaOriginal, nuevaLinea, "listado_articulos.txt");
     }
@@ -88,4 +92,10 @@ public class clsArticulo {
         mArticulo mArticle = new mArticulo();  
         mArticle.delete(lineaOriginal, "listado_articulos.txt");
     }
+=======
+        mArticulo mArticle = new mArticulo();
+        
+        mArticle.update(lineaOriginal, nuevaLinea, "listado_articulos.txt");
+    }
+>>>>>>> 696f1116325fbf4c836b0738ba4d4bb526f1bf1f
 }

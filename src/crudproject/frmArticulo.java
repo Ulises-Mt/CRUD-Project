@@ -5,7 +5,10 @@
 package crudproject;
 
 import java.util.Set;
+<<<<<<< HEAD
 import javax.swing.JOptionPane;
+=======
+>>>>>>> 696f1116325fbf4c836b0738ba4d4bb526f1bf1f
 
 /**
  *
@@ -246,7 +249,10 @@ public class frmArticulo extends javax.swing.JFrame {
         lblprecio.setText("Codigo");
 
         btneliminar.setText("Eliminar");
+<<<<<<< HEAD
         btneliminar.addActionListener(this::btneliminarActionPerformed);
+=======
+>>>>>>> 696f1116325fbf4c836b0738ba4d4bb526f1bf1f
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -376,6 +382,7 @@ public class frmArticulo extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_lstArticuloValueChanged
 
+<<<<<<< HEAD
     private void btneliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneliminarActionPerformed
         //Muestra un cuadro preguntado si queremos eliminar
         int respuesta = JOptionPane.showConfirmDialog(this, "Deseas eliminar este articulo "
@@ -388,6 +395,8 @@ public class frmArticulo extends javax.swing.JFrame {
        }
     }//GEN-LAST:event_btneliminarActionPerformed
 
+=======
+>>>>>>> 696f1116325fbf4c836b0738ba4d4bb526f1bf1f
     private void txtCodigoActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_txtCodigoActionPerformed
         // TODO add your handling code here:
     }// GEN-LAST:event_txtCodigoActionPerformed
