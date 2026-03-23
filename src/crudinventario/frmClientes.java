@@ -350,8 +350,7 @@ public class frmClientes extends javax.swing.JFrame {
         if (updateCliente != null) {
             updateCliente.actualizar(txtNoCliente1.getText(), txtNombre1.getText(),
                     txtTipoCliente1.getText(), txtRazonSocial1.getText());
-            javax.swing.JOptionPane.showMessageDialog(this, "Cliente actualizado con éxito");
-            btnBuscarActionPerformed(null);
+            javax.swing.JOptionPane.showMessageDialog(this, "Cliente actualizado con éxito");         
         }
     }//GEN-LAST:event_btnActualizarActionPerformed
 
@@ -365,7 +364,6 @@ public class frmClientes extends javax.swing.JFrame {
             if (respuesta == javax.swing.JOptionPane.YES_OPTION) {
                 updateCliente.eliminar();
                 javax.swing.JOptionPane.showMessageDialog(this, "Cliente eliminado con éxito");
-                btnBuscarActionPerformed(null);
             }
         }
     }//GEN-LAST:event_btnEliminarActionPerformed

@@ -432,10 +432,22 @@ public class frmArticulo extends javax.swing.JFrame {
     }// GEN-LAST:event_txtCodigoActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton1ActionPerformed
-        clsArticulo cArticulo = new clsArticulo(txtCodigo.getText().trim(), 
-                txtDescripcion.getText().trim(),
-                Double.parseDouble(txtPrecio.getText().trim()));
-        cArticulo.guardar();
+        try {
+                String precioStr = txtPrecio.getText().trim();
+                if(precioStr.isEmpty()) throw new NumberFormatException();
+
+                clsArticulo cArticulo = new clsArticulo(
+                    txtCodigo.getText().trim(), 
+                    txtDescripcion.getText().trim(),
+                    Double.parseDouble(precioStr));
+                cArticulo.guardar();
+                // Limpiar campos después de guardar
+                txtCodigo.setText("");
+                txtDescripcion.setText("");
+                txtPrecio.setText("");
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(this, "Por favor ingrese un precio válido (ej: 10.50)");
+            }
     }// GEN-LAST:event_jButton1ActionPerformed
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnBuscarActionPerformed
