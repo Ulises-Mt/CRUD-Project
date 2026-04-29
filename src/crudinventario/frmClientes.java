@@ -170,7 +170,7 @@ public class frmClientes extends javax.swing.JFrame {
                     .addComponent(txtBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnBuscar))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 202, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -333,10 +333,10 @@ public class frmClientes extends javax.swing.JFrame {
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addContainerGap(72, Short.MAX_VALUE))
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
@@ -350,7 +350,8 @@ public class frmClientes extends javax.swing.JFrame {
         if (updateCliente != null) {
             updateCliente.actualizar(txtNoCliente1.getText(), txtNombre1.getText(),
                     txtTipoCliente1.getText(), txtRazonSocial1.getText());
-            javax.swing.JOptionPane.showMessageDialog(this, "Cliente actualizado con éxito");         
+            javax.swing.JOptionPane.showMessageDialog(this, "Cliente actualizado con éxito");
+            btnBuscarActionPerformed(null);
         }
     }//GEN-LAST:event_btnActualizarActionPerformed
 
@@ -364,6 +365,7 @@ public class frmClientes extends javax.swing.JFrame {
             if (respuesta == javax.swing.JOptionPane.YES_OPTION) {
                 updateCliente.eliminar();
                 javax.swing.JOptionPane.showMessageDialog(this, "Cliente eliminado con éxito");
+                btnBuscarActionPerformed(null);
             }
         }
     }//GEN-LAST:event_btnEliminarActionPerformed

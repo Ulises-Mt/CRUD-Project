@@ -12,34 +12,25 @@ import java.io.IOException;
  *
  * @author Ulera
  */
-public class clsCSV {
+public class clscsv {
     
-    String archivo = "inventario.csv"; 
+    String archivo = "inventario.csv";
     
-    public void importarDatos(){
-        double totalGeneral = 0;
-        
-        try(BufferedReader br = new BufferedReader(new FileReader(archivo))){
-            String linea;
-            
-            br.readLine();
-            
+    public void importarDatos(){    
+        try(BufferedReader br = new BufferedReader(new FileReader(archivo))){        
+            br.readLine();   
+            String linea;         
             while ((linea = br.readLine()) != null){
                 String[] datos = linea.split(",");
+
+                clsArticulo cArticulo = new clsArticulo(datos[0], datos[1], Double.parseDouble(datos[2]));
                 
-                //asigacion de valores
-                clsArticulo cArticulo= new clsArticulo(
-                    datos[0], datos[1], Double.parseDouble(datos[2]));
-                //Almacena en artchivos txt
                 cArticulo.guardar();
-            }
+                }
             br.close();
-            System.out.println("=================================");
-            System.out.println("Se a terminado la importacion");
-            
-        } catch(IOException e){
-            System.out.println("Mensaje de error " + e.getMessage());
+            System.out.println("Se ha terminado la importacion.");    
+        }catch(IOException e){
+            System.out.println("Mensaje de error" + e.getMessage());
         }
     }
-    
 }
